@@ -1,0 +1,32 @@
+services:
+  - type: web
+    name: king-xd-bot
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "node index.js"
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 3000
+      - key: OWNER_NUMBER
+        sync: false
+      - key: LOGO_URL
+        sync: false
+      - key: ANIME_BACKGROUND
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: GEMINI_API_KEY
+        sync: false
+      - key: DEEPSEEK_API_KEY
+        sync: false
+      - key: REMOVEBG_API_KEY
+        sync: false
+      - key: MODE
+        value: public
+      - key: ENABLE_INTERNET_COLLECTION
+        value: true
+      - key: DATA_PER_PAIRING_MB
+        value: 0.01
